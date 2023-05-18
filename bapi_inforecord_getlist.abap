@@ -48,3 +48,12 @@
 *tables  inforecord_general   Info Records: General Data
 *tables  inforecord_purchorg   Info Records: Purchasing Organization Data
 *tables  return   Return Messages
+
+types: begin of ty_inforecord,
+         lv_vendor   type elifn,
+         lv_material type matnr,
+       end of ty_inforecord.
+
+
+
+
