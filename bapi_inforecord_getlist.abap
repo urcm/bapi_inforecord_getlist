@@ -54,6 +54,9 @@ types: begin of ty_inforecord,
          lv_material type matnr,
        end of ty_inforecord.
 
-
+data: gt_inforecord_general  type standard table of bapieina,
+      gt_inforecord_purchorg type standard table of bapieine,
+      gt_inforecord_segment  type standard table of bapisegm,
+      gt_return              type standard table of bapireturn.
 
 
