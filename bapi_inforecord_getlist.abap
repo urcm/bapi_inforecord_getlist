@@ -60,3 +60,4 @@ data: gt_inforecord_general  type standard table of bapieina,
       gt_return              type standard table of bapireturn.
 
 
+lv_material  = |{ lv_material width = 18 alpha = in }|.
