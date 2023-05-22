@@ -62,3 +62,28 @@ data: gt_inforecord_general  type standard table of bapieina,
 
 lv_material  = |{ lv_material width = 18 alpha = in }|.
 lv_vendor = |{ lv_vendor width = 10 alpha = in }|.
+
+
+call function 'BAPI_INFORECORD_GETLIST'
+  exporting
+    vendor              = lv_vendor   " Vendor
+    material            = lv_material    " Material
+*   mat_grp             =     " Material Group
+*   vend_mat            =     " Vendor's Material Number
+*   vend_part           =     " Vendor Subrange
+*   vend_matg           =     " Vendor's Material Group
+*   purch_org           =     " Purchasing Organization
+*   info_type           =     " Info Category
+*   plant               =     " Plant
+*   pur_group           =     " Purchasing Group
+*   purchasinginforec   =     " Info Record Number
+*   deleted_inforecords = SPACE    " Including Purchasing Info Records Flagged for Deletion
+*   purchorg_data       = 'X'    " Purchasing Organization Data on Info Record
+*   general_data        = 'X'    " General Data on Info Record
+*   material_evg        =
+*   purchorg_vend       = SPACE    " Link Vendor Number to PURCHORG
+  tables
+    inforecord_general  = gt_inforecord_general     " Info Records: General Data
+    inforecord_purchorg = gt_inforecord_purchorg    " Info Records: Purchasing Organization Data
+    inforecord_segment  = gt_inforecord_segment
+    return              = gt_return.    " Return Messages
