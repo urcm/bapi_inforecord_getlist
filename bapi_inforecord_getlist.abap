@@ -61,3 +61,4 @@ data: gt_inforecord_general  type standard table of bapieina,
 
 
 lv_material  = |{ lv_material width = 18 alpha = in }|.
+lv_vendor = |{ lv_vendor width = 10 alpha = in }|.
