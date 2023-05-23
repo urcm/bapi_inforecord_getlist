@@ -87,3 +87,9 @@ call function 'BAPI_INFORECORD_GETLIST'
     inforecord_purchorg = gt_inforecord_purchorg    " Info Records: Purchasing Organization Data
     inforecord_segment  = gt_inforecord_segment
     return              = gt_return.    " Return Messages
+    
+cl_demo_output=>write_data( gt_inforecord_general  ).
+cl_demo_output=>write_data( gt_inforecord_purchorg  ).
+cl_demo_output=>write_data( gt_inforecord_segment  ).
+cl_demo_output=>write_data( gt_return  ).
+cl_demo_output=>display(  ).
